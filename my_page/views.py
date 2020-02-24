@@ -94,7 +94,7 @@ class Contractor_Info(generic.TemplateView):
     template_name = 'my_page/contractor_info.html'
 
 
-def message(request,customer_id=-1):
+def message(request,customer_id):
     if request.method=="POST":
         user = User.objects.get(id=customer_id)
         if request.user.user_role.id==1:
@@ -113,14 +113,11 @@ def message(request,customer_id=-1):
                 body=request.POST["body"],
                 file=request.FILES,
             )
+
+
     talk_lists = {}
-
-
-    if customer_id==-1:
-        customer_id=request.user.id
     user = User.objects.get(id=customer_id)
     if request.user.user_role.id==1:
-
         messages=OrderMessage.objects.filter(maker=request.user,buyer=user).order_by('updated_at')
         message_profile=BuyerProfile.objects.get(user=user)
         msgs = OrderMessage.objects.filter(maker=request.user).order_by('-updated_at')
@@ -129,7 +126,6 @@ def message(request,customer_id=-1):
             profile=BuyerProfile.objects.get(user=message.buyer)
             talk_lists[message.buyer]=[profile,message.updated_at]
     else:
-
         messages=OrderMessage.objects.filter(buyer=request.user,maker=user).order_by('updated_at')
         message_profile = MakerProfile.objects.get(user=user)
         msgs = OrderMessage.objects.filter(buyer=request.user).order_by('-updated_at')

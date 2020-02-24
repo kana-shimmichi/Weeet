@@ -183,7 +183,7 @@
                                                 <td class="col-md-4 center">{{order.order_post_at|date:"SHORT_DATE_FORMAT"}}</td>
                                                 <td class="col-md-2 center">
 
-                                                  <a href="{% url 'my_page:message_detail' order.buyer.id %}"class="btn btn-default center">メッセージ</a>
+                                                  <a href="{% url 'my_page:message_detail' order.maker_decided.id %}"class="btn btn-default center">メッセージ</a>
 
                                                     {% if order.status.id == 4 %}
                                                     <p class="btn btn-success center" >完了</p>
