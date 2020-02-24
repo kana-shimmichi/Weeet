@@ -23,6 +23,6 @@ urlpatterns = [
     path('role_choice/', views.RoleChoice.as_view(), name='role_choice'),
     path('add_role/',views.addRole, name='add_role'),
     path('add_profile/',views.addProfile,name="add_profile"),
-
+    path('change_profile',views.change_profile,name="change_profile")
 
 ]

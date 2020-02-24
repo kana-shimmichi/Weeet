@@ -53,9 +53,9 @@
           <div class="panel panel-default">
             <div class="panel-heading center">ユーザ情報</div>
               {% if user.user_role.id == 1 %}
-            <div class="panel-body center"><a href="{% url 'my_page:contractor_info' %}">登録情報変更</a></div>
+            <div class="panel-body center"><a href="{% url 'home:change_profile' %}">登録情報変更</a></div>
               {% else %}
-            <div class="panel-body center"><a href="{% url 'my_page:orderer_info' %}">登録情報変更</a></div>
+            <div class="panel-body center"><a href="{% url 'home:change_profile' %}">登録情報変更</a></div>
               {% endif %}
           </div>
 
