@@ -53,7 +53,7 @@
                                 <td class="col-md-3"><p>
                                     <a href="{% url 'home:order_detail' order.id %}"class="btn btn-default ”form-inline”">仕事の詳細</a>
                                     <a href="{% url 'home:like' order.id %}" class="btn btn-warning ”form-inline”">お気に入り</a>
-                                    <a href="{% url 'home:submit' order.id %}" class="btn btn-primary" ”form-inline”">申し込み</a>
+                                    <a href="{% url 'my_page:submit' order.id %}" class="btn btn-primary" ”form-inline”">申し込み</a>
                                 </p></td>
                             </tr>
                         {% endfor %}

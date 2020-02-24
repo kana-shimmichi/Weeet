@@ -101,7 +101,7 @@
                                                 <td class="col-md-2 center">
 
                                                   <a href="{% url 'my_page:message_detail' like.like_order.buyer.id %}"class="btn btn-default center">メッセージ</a>
-                                                  <a href="{% url 'home:submit'%}" class="btn btn-warning center" >申し込み</em></a>
+                                                  <a href="{% url 'my_page:submit' like.like_order.id %}" class="btn btn-warning center" >申し込み</em></a>
                                                 </td>
                                               </tr>
                                       {% endfor %}
@@ -138,7 +138,11 @@
                                                 <td class="col-md-2 center">
 
                                                   <a href="{% url 'my_page:message_detail' order.buyer.id %}"class="btn btn-default center">メッセージ</a>
-                                                  <a href="{% url 'home:submit'%}" class="btn btn-warning center" >申し込み</em></a>
+                                                  {% if order.status.id ==  2%}
+                                                    <p class="btn btn-success center" >支払待ち</p>
+                                                    {% else%}
+                                                    <a href="{% url 'my_page:complete' order.id %}" class="btn btn-warning center" >作成終了</em></a>
+                                                    {% endif %}
                                                 </td>
                                               </tr>
                                       {% endfor %}

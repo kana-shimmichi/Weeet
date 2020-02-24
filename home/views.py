@@ -63,6 +63,9 @@ class ResearchResult(generic.ListView):
     model = Order
     template_name = "home/research_result.html"
     paginate_by = 10
+    def get_queryset(self):
+        status=MstStatus.objects.get(id=1)
+        return Order.objects.filter(status=status)
 
 
 def order_detail(request,order_id):
@@ -75,14 +78,6 @@ def like(request,order_id):
     like.save()
 
     return redirect('/')
-
-def submit(request,order_id):
-    return redirect('/')
-
-
-
-
-
 
 
 

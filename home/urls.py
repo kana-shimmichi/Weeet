@@ -19,11 +19,10 @@ urlpatterns = [
     path('research_result/', views.ResearchResult.as_view(), name='research_result'),
     path('order_detail/<int:order_id>', views.order_detail, name='order_detail'),
     path('like/<int:order_id>', views.like, name='like'),
-    path('order_submit/<int:order_id>', views.submit, name='submit'),
+
     path('role_choice/', views.RoleChoice.as_view(), name='role_choice'),
     path('add_role/',views.addRole, name='add_role'),
     path('add_profile/',views.addProfile,name="add_profile"),
-    path('submit/',views.submit,name="submit")
 
 
 ]

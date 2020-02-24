@@ -61,6 +61,13 @@ def menu(request):
         }
         return render(request,'my_page/my_menu_for_buyer.html',data)
 
+def submit(request,order_id):
+    order=Order.objects.get(id=order_id)
+    order.makers.add(request.user)
+    return redirect('/my_menu')
+
+
+
 
 def order_decide(request,order_id,customer_id):
     order=Order.objects.get(id=order_id)
@@ -138,6 +145,14 @@ def message(request,customer_id=-1):
 
     }
     return render(request,'my_page/message.html',data)
+
+
+def complete(request,order_id):
+    order=Order.objects.get(id=order_id)
+    status=MstStatusModel.objects.get(id=6)
+    order.status=status
+    order.save()
+    return redirect('/my_menu')
 
 
 
