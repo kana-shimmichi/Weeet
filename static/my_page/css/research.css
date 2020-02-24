@@ -1,0 +1,193 @@
+
+.multi-step-checkout-process-step {
+  margin-top: 20px;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .multi-step-checkout-process-step {
+    padding-right: 0rem;
+  }
+}
+
+.multi-step-checkout-process .accordion-title {
+  color: #3e3e3e;
+  font-size: 1.25rem;
+  transition: color 0.5s ease;
+  border: none;
+  font-family: 'Droid serif', serif;
+}
+
+.multi-step-checkout-process .accordion-title:hover, .multi-step-checkout-process .accordion-title:active, .multi-step-checkout-process .accordion-title:focus {
+  color: #242424;
+  transition: color 0.5s ease;
+  background: none;
+}
+
+.multi-step-checkout-process :last-child:not(.is-active) > .accordion-title {
+  border: none;
+}
+
+.multi-step-checkout-process .accordion-item {
+  border-bottom: 1px solid #e6e6e6;
+  padding-right: 0.8rem;
+}
+
+.multi-step-checkout-process .accordion-item:first-child() {
+  border-top: 1px solid #e6e6e6;
+}
+
+.multi-step-checkout-process .accordion-item.is-active {
+  border: 1px solid #e6e6e6;
+  border-top: 3px solid #1779ba;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.multi-step-checkout-process .accordion-item .accordion-title {
+  font-weight: 400;
+}
+
+.multi-step-checkout-process .accordion-item .accordion-title::before {
+  right: 0.5rem;
+}
+
+.multi-step-checkout-process .accordion-content {
+  border: none;
+  padding-left: 35px;
+}
+
+.multi-step-checkout-process :last-child > .accordion-content:last-child {
+  border-bottom: none;
+}
+
+.multi-step-checkout-step-title-subheader {
+  color: #a4a4a4;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-left: 10px;
+  font-family: 'Open sans', serif;
+}
+
+.multi-step-checkout-step-subheader {
+  color: #3e3e3e;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Open sans', sans-serif;
+}
+
+.multi-step-checkout-step-subdesc {
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}
+
+.multi-step-checkout-shipping-option {
+  margin-bottom: 10px;
+}
+
+.multi-step-checkout-step-section {
+  border-bottom: 1px dashed #e6e6e6;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.multi-step-checkout-shipping-option-selection {
+  position: absolute;
+  margin-top: 0.2rem;
+}
+
+.multi-step-checkout-shipping-option-title {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  margin-left: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.multi-step-checkout-shipping-option-desc {
+  font-size: 0.9rem;
+  color: #8a8a8a;
+  margin-left: 25px;
+  margin-top: -10px;
+}
+
+.multi-step-checkout-shipping-cost {
+  text-align: right;
+}
+
+.multi-step-checkout-form-divider {
+  border-bottom: 1px dashed #e6e6e6;
+}
+
+.multi-step-checkout-form input {
+  background: #f8f8f8;
+}
+
+.multi-step-checkout-enews-sign-up label {
+  position: relative;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.multi-step-checkout-enews-sign-up-checkbox {
+  position: absolute;
+  margin-top: 0.4rem;
+}
+
+.multi-step-checkout-credit-card-info label span {
+  color: #a4a4a4;
+}
+
+.multi-step-checkout-payment-icons {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
+.multi-step-checkout-payment-icons li {
+  display: inline;
+}
+
+.multi-step-checkout-billing-address .multi-step-checkout-billing-address-list {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}
+
+.multi-step-checkout-billing-address .multi-step-checkout-billing-address-checkbox {
+  position: absolute;
+  margin-top: 0.4rem;
+}
+
+.multi-step-checkout-billing-address label {
+  margin-left: 1.5rem;
+}
+
+.multi-step-checkout-create-account {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .multi-step-checkout-create-account {
+    margin-top: 0.5rem;
+  }
+}
+
+.multi-step-checkout-create-account .create-account-desc {
+  font-size: 0.9rem;
+  color: #8a8a8a;
+}
+
+.multi-step-checkout-logo {
+  width: 118px;
+  height: 38px;
+}
+
+.multi-step-checkout-arrow {
+  height: 13px;
+  width: 13px;
+}
+

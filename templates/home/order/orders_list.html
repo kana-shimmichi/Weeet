@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/orders_list.css' %}">
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block content %}
+    <!-- End Top Bar -->
+
+{% for maker in makers %}
+
+<div class="portfolio-resume-scrolling-container row">
+  <style type="text/css">
+.portfolio-resume-overview:after {
+  background-image: url("{{maker.picture.url}}");
+  background-size:contain;
+}
+
+</style>
+  <div class="columns small-12 medium-5 portfolio-resume-overview" stype="background-image: url('https://placeimg.com/400/400/animals')">
+    <div class="portfolio-resume-overview-content">
+      <h3 class="portfolio-resume-name">{{maker.last_name}} {{maker.first_name}}</h3>
+      <p></p>
+      <a class="button primary expanded" href="/contact/{{maker.id}}">Contact Me</a>
+      <p></p>
+      <a class="button success expanded" href="/add_like/{{maker.id}}">Add Like!!</a>
+    </div>
+  </div>
+  <div class="columns small-12 medium-7 portfolio-resume-scrolling">
+    <h3>SKILLS</h3>
+
+    <ul class="portfolio-resume-side-list">
+    {% for skill in maker.skill.all %}
+      <li>{{skill.name}}</li>
+    {% endfor %}
+    </ul>
+    <h3>Languages</h3>
+    <ul>
+      {% for lang in maker.lang.all%}
+      <li>{{lang.name}}</li>
+      {% endfor %}
+    </ul>
+    <h3>COST</h3>
+    <p>{{maker.cost}}</p>
+  </div>
+</div>
+{% endfor %}
+
+
+    
+{% endblock %}
+
+

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- トップ画像 -->
+    <div class="promo-hero promo-hero-bg-image">
+      <div class="promo-hero-content">
+        <h1 class="promo-hero-title">Webサイト制作・受注を<br>
+        もっと自由に簡単に。</h1>
+        <div class="promo-hero-ctas">
+          <a href="{% url 'register:login' %}" class="promo-section-cta button primary">ログイン</a>
+          <a href="{% url 'register:user_create' %}" class="promo-section-cta button white-hollow">会員登録</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 作業フローの解説 -->
+    <div class="article-row-section">
+      <div class="article-row-section-inner">
+
+        <h2 class="article-row-section-header"></h2>
+
+          <article class="article-row">
+            <div class="article-row-img">
+              <img src="/media/img/index_profile.png" class="promotion2">
+            </div>
+            <div class="article-row-content">
+              <h1 class="article-row-content-header">基本情報の登録</h1>
+              <p class="article-row-content-description">マイメニューから発注者情報・受注者情報を登録してプロフィールを完成させよう。</p>
+            </div>
+          </article>
+
+          <article class="article-row article-row-reversed">
+            <div class="article-row-img">
+              <img src="/media/img/index_list.png" class="promotion2">
+            </div>
+            <div class="article-row-content">
+              <h1 class="article-row-content-header">条件にあった案件をピックアップ</h1>
+              <p class="article-row-content-description">利用者が登録した情報から、条件に合う人をピックアップします。</p>
+            </div>
+          </article>
+
+          <article class="article-row">
+            <div class="article-row-img">
+              <img src="/media/img/index_manage.png" class="promotion2">
+            </div>
+            <div class="article-row-content">
+              <h1 class="article-row-content-header">マイページで案件の管理</h1>
+              <p class="article-row-content-description">案件をお気に入りに追加するといつでもその情報が確認できます。</p>
+            </div>
+          </article>
+
+          <article class="article-row article-row-reversed">
+            <div class="article-row-img">
+              <img src="/media/img/index_agreement.png" class="promotion2">
+            </div>
+            <div class="article-row-content">
+              <h1 class="article-row-content-header">お仕事の決定</h1>
+              <p class="article-row-content-description">メッセージ機能で気になる方案件についてのやり取りをしてみよう！仕事の同意が得られたら作業開始です。</p>
+            </div>
+          </article>
+      </div>
+    </div>
+{% endblock %}

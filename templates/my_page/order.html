@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+      <ul class="orbit-container">
+        <li class="orbit-slide is-active">
+          <img src="https://placehold.it/2000x750">
+        </li>
+      </ul>
+    </div>
+
+    <!-- 会員登録入力フォーム -->
+
+    <h2>発注情報</h2>
+
+    <form action="#" method="post">
+
+      <div class="item">
+        <p>Webサイト制作</p>
+        <input type="radio" name="" value="homepage"><label for="homepage">ホームページ作成</label>
+        <input type="radio" name="" value="WordPress"><label for="WordPress">WordPress制作・導入</label>
+        <input type="radio" name="" value="coding"><label for="coding">HTML・CSSコーディング</label>
+      </div>
+
+      <div class="item">
+        <p>Webデザイン</p>
+        <input type="radio" name="" value="Web_design"><label for="Web_design">Webサイトのデザイン</label>
+        <input type="radio" name="" value="mobile_design"><label for="mobile_design">スマホ・モバイルサイトのデザイン</label>
+        <input type="radio" name="" value="UI/UX"><label for="UI/UX">UI/UXデザイン</label>
+      </div>
+
+      <div class="item">
+        <p>その他の要望<br>
+        <input type="text" name=""></p>
+      </div>
+
+      <div class="item">
+        <p>納品希望日<br>
+        <input type="text" name=""></p>
+      </div>
+
+      <div class="item">
+        <p>依頼金額の目安<br>
+        <input type="text" name=""></p>
+      </div>
+
+      <div class="item">
+        <p>コメント<br>
+        <input type="text" name=""></p>
+      </div>
+
+        <p><input type="submit" value="登録"></p>
+    </form>
+{% endblock %}
+
