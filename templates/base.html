@@ -181,12 +181,16 @@
                   </li>
                 </ul>
 
-                   <a class="nav-link text-white p-2 font-weight-bold" href="/user_create">会員登録</a>
-                   <a class="nav-link text-white p-2 font-weight-bold" href="/login">ログイン</a>
 
+                {% if user.is_authenticated %}
                   <!--ログイン後の表示-->
                    <a class="nav-item nav-link" href="{% url 'my_page:my_menu' %}">マイメニュー</a>
                    <a class="nav-item nav-link" href="{% url 'register:logout' %}">ログアウト</a>
+                  {% else %}
+                   <a class="nav-link text-white p-2 font-weight-bold" href="/user_create">会員登録</a>
+                   <a class="nav-link text-white p-2 font-weight-bold" href="/login">ログイン</a>
+                  {% endif %}
+
 
               </div>
             </div>
