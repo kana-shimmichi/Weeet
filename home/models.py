@@ -66,9 +66,9 @@ class MakerProfile(models.Model):
         verbose_name_plural="作成者プロフィール"
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     picture = models.ImageField(blank=True,null=True)
-    lang = models.ManyToManyField(MstLang,blank=True,null=True)
+    lang = models.ManyToManyField(MstLang)
     cost = models.ForeignKey(MstCost,on_delete=models.CASCADE,blank=True,null=True)
-    skill = models.ManyToManyField(MstSkill,blank=True,null=True)
+    skill = models.ManyToManyField(MstSkill)
 
     estimate_point=models.FloatField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
