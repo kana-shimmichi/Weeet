@@ -1,0 +1,52 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ</title>
+    <!-- CSS START -->
+     <style type="text/css">
+      .center {
+      text-align: center;
+      }
+     </style>
+    <!-- CSS END -->
+</head>
+<body>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a href=""><button type="button" class="close">×</button></a>
+              <form method="POST" enctype="multipart/form-data">
+                  {% csrf_token %}
+            <div class="center"><h3 id="myModalLabel">お問い合わせ</h3></div>
+          </div>
+          <div class="modal-body">
+
+
+              <div class="form-group"><label>User name</label>
+                  {{form.user}}
+              </div>
+              <div class="form-group"><label>E-Mail</label>
+                  {{form.email}}
+              </div>
+              <div class="form-group"><label>Message</label>
+                  {{form.message}}
+                  {{form.file}}
+          </div>
+          <div class="modal-footer">
+            <div class="text-center">
+                <a href=""><button input="submit" class="btn btn-warning">　 送る 　</button>
+　           </div></hr><br>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

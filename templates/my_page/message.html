@@ -1,0 +1,383 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS START -->
+    <style type="text/css">
+    section{
+	padding-top: 60px;
+    padding-bottom: 60px;
+    background: #f5f5f5;
+    }
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+
+    ::-webkit-scrollbar-thumb {
+        background: #000;
+        border-radius: 5px;
+    }
+    .chat-list-box {
+        display: inline-block;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    }
+
+    .flat-icon li{
+        display: inline-block;
+        padding: 0px 8px;
+        vertical-align: middle;
+        position: relative;
+        top: 7px;
+    }
+
+    .flat-icon a img {
+        width: 22px;
+        border-radius: unset !important;
+    }
+
+    ul.list-inline.text-left.d-inline-block.float-left {
+        margin-bottom: 0;
+    }
+
+    .chat-list-box ul li img {
+        border-radius: 50px;
+    }
+
+    .message-box{
+        display: inline-block;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+    }
+
+    .msg-box li{
+        display:inline-block;
+        padding-left: 10px;
+    }
+
+    .msg-box img{
+        border-radius:50px;
+    }
+
+    .msg-box li span{
+        padding-left:8px;
+        color:#545454;
+        font-weight:550;
+    }
+
+    .head-box {
+        display: flow-root;
+        padding: 10px;
+        background: #3676E0;
+    }
+    .head-box ul li a{
+        color:#fff;
+    }
+    .chat-person-list{
+        padding:14px;
+    }
+    .chat-person-list ul li img{
+        width:30px;
+        border-radius:50px;
+    }
+
+    .chat-person-list ul li span {
+        padding-left: 20px;
+    }
+
+    .chat-person-list ul li {
+        line-height: 55px;
+    }
+
+    span.chat-time {
+        float: right;
+        font-size: 12px;
+    }
+
+    .head-box-1{
+        display: flow-root;
+        padding: 10px;
+        background: #3676E0;
+    }
+    .head-box-1 ul li i{
+        color:#fff;
+        cursor:pointer;
+    }
+    .head-box-1 ul li span{
+        color:#fff;
+        position:relative;
+        top:-10px;
+    }
+    .msg_history {
+        padding: 10px;
+        height:280px;
+        overflow: overlay;
+    }
+    .incoming_msg_img {
+        display: inline-block;
+        width: 6%;
+    }
+    .timee{
+        position: absolute;
+        left: 115px;
+        top: 30px;
+        color: #fff;}
+
+    .received_msg {
+        display: inline-block;
+        padding: 0 0 0 10px;
+        vertical-align: top;
+        width: 92%;
+    }
+    .received_withd_msg {
+        width: 57%;
+    }
+    .received_withd_msg p {
+           background: rgba(0,123,255,.5) none repeat scroll 0 0;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: 14px;
+        margin: 0;
+        padding: 5px 10px 5px 22px;
+        width: 100%;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+    .time_date {
+        color: #747474;
+        display: block;
+        font-size: 12px;
+        margin: 8px 0 0;
+    }
+    .incoming_msg_img img {
+        width: 100%;
+        border-radius: 50px;
+        float: left;
+    }
+    .outgoing_msg {
+        overflow: hidden;
+        margin: 10px 0 10px;
+    }
+    .sent_msg {
+        float: right;
+        width: 46%;
+    }
+    .sent_msg p {
+      background: #ddd;
+        border-radius: 3px;
+        font-size: 14px;
+        margin: 0;
+        color: #333;
+        padding: 5px 10px 5px 22px;
+        width: 100%;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+    .chat-person-list ul li a {
+        color: #545454;
+        text-decoration: none;
+    }
+    .attachement {
+        background: #777;
+        position: absolute;
+        width: 220px;
+        right: 30%;
+        top: 42px;
+        display: none;
+    }
+    .attachement ul li {
+        display: -webkit-inline-box;
+        margin: 0px 19px 15px 20px;
+    }
+    .attachement ul li a{
+        color:#fff;
+    }
+
+    .setting-drop{
+        display: none;
+        position: absolute;
+        width: 130px;
+        height: 148px;
+        right: 0;
+        top: 42px;
+        background: #ffffff;
+        color: #545454;
+        box-shadow: 1px 1px 15px 1px #0000001f;
+    }
+
+    .send-message {
+        padding: 15px;
+        background: #3676E0;
+        height: auto;
+    }
+    .send-message textarea:focus {
+        box-shadow: none;
+        outline: none;
+        border-color:#ddd;
+    }
+    .send-message ul li {
+        display: -webkit-inline-box;
+        padding-left: 15px;
+    }
+    .send-message ul li i{color:#0056b3;}
+    .send-message ul li a{color:#0056b3;}
+    .send-message ul {
+        position: absolute;
+        right: 45px;
+        top: 88%;
+        border-left: 1px solid #9c9a9a;
+    }
+    .send-message .form-control {
+        border-radius: 50px;
+    }
+
+    @media only screen and (max-width: 800px) {
+
+    .message-box {
+        display: none;
+        position:relative;
+        top:-100%;
+    }
+
+    }
+    </style>
+
+</head>
+
+
+
+
+<body>
+<section>
+	  <div class="container">
+	   <div class="row">
+	     <div class="col-md-4">
+		  <div class="chat-list-box">
+		  <div class="head-box">
+		    <ul class="list-inline text-left d-inline-block float-left">
+			  <li></li>
+			</ul>
+			 <ul class="flat-icon list-inline text-right d-inline-block float-right">
+			  <li> <a href="#"> <i class="fas fa-search"></i> </a> </li>
+			  <li> <a href="#"> <i class="fas fa-ellipsis-v"></i> </a> </li>
+			</ul>
+			</div>
+
+			<div class="chat-person-list">
+			  <ul class="list-inline">
+				  {% for key, value in talk_lists.items %}
+				  <li>
+					  <a href="{% url 'my_page:message_detail' value.0.id %}" class="flip">
+					  <img src="{{ value.0.picture.url }}" alt="">
+					  <span> {{ key }}</span>
+					  <span class="chat-time">{{ value.1 }}</span></a>
+				  </li>
+				 {% endfor %}
+			  </ul>
+			</div>
+		  </div>
+		 </div> <!-- col-md-4 closed -->
+
+		 <div class="col-md-8">
+		   <div class="message-box">
+		     <div class="head-box-1">
+
+			   <ul class="msg-box list-inline text-left d-inline-block float-left">
+			    <li>
+					<a href="">
+					<i class="fas fa-arrow-left" id="back"></i>
+					</a>
+				</li>
+				  <li> <img src="{{message_profile.picture.url}}" alt="" width="40px">
+					  <span> {{message_profile.user.get_full_name}} </span>
+				  </li>
+			   </ul>
+
+			</div>
+
+			<div class="msg_history">
+            {% for message in messages %}
+				{% if message.talker == user %}
+					<div class="outgoing_msg">
+					  <div class="sent_msg">
+						<p>{{message.body}}</p>
+						<span class="time_date">{{message.created_at}}</span> </div>
+					</div>
+				{% else %}
+					<div class="incoming_msg">
+					  <div class="incoming_msg_img"> <img src="{{message_profile.picture.url}}" alt="Picture"> </div>
+					  <div class="received_msg">
+						<div class="received_withd_msg">
+						  <p>{{message.body}}</p>
+						  <span class="time_date">{{message.created_at}}</span></div>
+					  </div>
+					</div>
+				{% endif %}
+			{% endfor %}
+          </div>
+
+			<div class="send-message">
+			  <form  method="POST" enctype="multipart/form-data">
+				  {% csrf_token %}
+			   <textarea cols="10" rows="2" class="form-control" name="body" placeholder="Type your message here ..."> </textarea>
+			    <ul class="list-inline">
+				 <li>
+				    <button type="submit">
+					  <i class="fas fa-paper-plane"></i>
+					</button>
+				  </li>
+				</ul>
+			  </form>
+			</div>
+
+
+		   </div>
+		 </div>
+
+	   </div>
+	  </div>
+	</section>
+
+
+	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
+	<script>
+	  $("#attach").click(function(){
+		  $(".attachement").toggle();
+		});
+	</script>
+	<script>
+	  $("#dset").click(function(){
+		  $(".setting-drop").toggle('1000');
+		});
+	</script>
+
+	<script>
+	$(document).ready(function(){
+    $(".flip").click(function(){
+        $(".message-box").show("slide", { direction: "right" }, 10000);
+    });
+});
+ </script>
+ <script>
+	$(document).ready(function(){
+    $("#back").click(function(){
+        $(".message-box").hide("slide", { direction: "left" }, 10000);
+    });
+});
+ </script>
+
+</body>
+</html>

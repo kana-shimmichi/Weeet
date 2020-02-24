@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/menu.css' %}">
+{% endblock %}
+{% block js %}
+<script src="{% static 'home/js/menu.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<form action="/add_role/"method="POST">
+  {% csrf_token %}
+<p>どちらでユーザ登録をしますか？：<br>
+<select class="form-control" name="role">
+<option value=1>作成者</option>
+<option value=2>発注者</option>
+</select></p>
+
+  <button class="promo-section-cta button primary" type="submit">送信</button>
+</form>
+{% endblock %}

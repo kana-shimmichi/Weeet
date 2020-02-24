@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/menu.css' %}">
+{% endblock %}
+{% block js %}
+<script src="{% static 'home/js/menu.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<form action="/add_profile/"method="POST" enctype="multipart/form-data" >
+  {% csrf_token %}
+{{ user_forms.as_p }}
+{{ profile_forms.as_p }}
+  <button class="promo-section-cta button primary" type="submit">保存</button>
+</form>
+
+{% endblock %}

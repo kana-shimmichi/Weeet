@@ -1,0 +1,206 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% endblock %}
+{% block js %}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+
+<head>
+  <title>マイメニュー</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <style type="text/css">
+      .center {
+      text-align: center;
+      }
+  </style>
+</head>
+
+
+<hr>
+<div class="container bootstrap snippet">
+    <div class="row">
+  		<div class="col-sm-10"><h1>{{user.get_full_name}}</h1></div>
+    </div>
+
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+
+          <div class="text-center">
+              {% if profile.picture %}
+            <img src="{{profile.picture.url}}" class="avatar img-circle img-thumbnail" alt="Image">
+              {% else %}
+              <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="Image">
+
+              {% endif %}
+
+              <a href="{% url 'my_page:profile' %}"><h6>プロフィール画像の編集</h6></a><br>
+
+          </div></hr><br>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading center">ユーザ情報</div>
+              {% if user.user_role.id == 1 %}
+            <div class="panel-body center"><a href="{% url 'my_page:contractor_info' %}">登録情報変更</a></div>
+              {% else %}
+            <div class="panel-body center"><a href="{% url 'my_page:orderer_info' %}">登録情報変更</a></div>
+              {% endif %}
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading center">仕事管理</div>
+              {% if user.user_role.id == 1 %}
+              <div class="panel-body center"><a href="{% url 'home:research_result' %}">仕事を探す</a></div>
+              {% else %}
+            <div class="panel-body center"><a href="{% url 'home:order_job' %}">仕事の依頼</a></div>
+              {% endif %}
+
+          </div>
+        </div><!--/col-3-->
+    	<div class="col-sm-9">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">お気に入り</a>　　</li>
+                <li><a data-toggle="tab" href="#pay">承諾依頼一覧</a>　　</li>
+                <li><a data-toggle="tab" href="#fin">完了・キャンセル一覧</a>　　</li>
+              </ul>
+
+
+            <div class="tab-content">
+                 <div class="tab-pane active" id="home">
+                     <hr>
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-11 ">
+                                  <div class="panel-body">
+                                    <table class="table table-hover table-bordered table-list">
+                                      <thead>
+                                        <tr>
+                                            <th class="center active">タイトル</th>
+                                            <th class="center active">依頼日</th>
+                                            <th class="center active">詳細</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                      {% for like in likes%}
+                                              <tr>
+                                                <td class="col-md-2 center">{{like.like_order.title}}</td>
+                                                <td class="col-md-4 center">{{like.like_order.order_post_at|date:"SHORT_DATE_FORMAT"}}</td>
+                                                <td class="col-md-2 center">
+
+                                                  <a href="{% url 'my_page:message_detail' like.like_order.buyer.id %}"class="btn btn-default center">メッセージ</a>
+                                                  <a href="{% url 'home:submit'%}" class="btn btn-warning center" >申し込み</em></a>
+                                                </td>
+                                              </tr>
+                                      {% endfor %}
+                                      </tbody>
+                                    </table>
+
+                                  </div>
+
+                            </div>
+                        </div>
+                    </div>
+                 </div><!--/tab-pane-->
+
+                <div class="tab-pane" id="pay">
+                     <hr>
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-11 ">
+                                  <div class="panel-body">
+                                    <table class="table table-hover table-bordered table-list">
+                                      <thead>
+                                        <tr>
+                                            <th class="center active">タイトル</th>
+                                            <th class="center active">依頼日</th>
+                                            <th class="center active">詳細</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                      {% for order in my_orders%}
+                                              <tr>
+                                                <td class="col-md-2 center">{{order.title}}</td>
+                                                <td class="col-md-4 center">{{order.order_post_at|date:"SHORT_DATE_FORMAT"}}</td>
+                                                <td class="col-md-2 center">
+
+                                                  <a href="{% url 'my_page:message_detail' order.buyer.id %}"class="btn btn-default center">メッセージ</a>
+                                                  <a href="{% url 'home:submit'%}" class="btn btn-warning center" >申し込み</em></a>
+                                                </td>
+                                              </tr>
+                                      {% endfor %}
+                                      </tbody>
+                                    </table>
+
+                                  </div>
+
+                            </div>
+                        </div>
+                    </div>
+                 </div><!--/tab-pane-->
+
+                <div class="tab-pane" id="fin">
+                     <hr>
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-11 ">
+                                  <div class="panel-body">
+                                    <table class="table table-hover table-bordered table-list">
+                                      <thead>
+                                        <tr>
+                                            <th class="center active">タイトル</th>
+                                            <th class="center active">依頼日</th>
+                                            <th class="center active">詳細</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                      {% for order in my_fin_orders%}
+                                              <tr>
+                                                <td class="col-md-2 center">{{order.title}}</td>
+                                                <td class="col-md-4 center">{{order.order_post_at|date:"SHORT_DATE_FORMAT"}}</td>
+                                                <td class="col-md-2 center">
+
+                                                  <a href="{% url 'my_page:message_detail' order.buyer.id %}"class="btn btn-default center">メッセージ</a>
+
+                                                    {% if order.status.id == 4 %}
+                                                    <p class="btn btn-success center" >完了</p>
+                                                    {% elif order.status.id == 5 %}
+                                                    <p class="btn btn-secondary center" >キャンセル</p>
+                                                    {% elif order.status.id == 6 %}
+                                                    <p class="btn btn-info center" >検収中</p>
+                                                    {% endif %}
+                                                </td>
+                                              </tr>
+                                      {% endfor %}
+                                      </tbody>
+                                    </table>
+
+                                  </div>
+
+                            </div>
+                        </div>
+                    </div>
+                 </div><!--/tab-pane-->
+
+          　</div><!--/tab-content-->
+        </div><!--/col-9-->
+    </div><!--/row-->
+
+{% endblock %}
+
+
+

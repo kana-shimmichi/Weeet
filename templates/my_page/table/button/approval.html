@@ -1,0 +1,86 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    .center {
+        margin-top:50px;
+    }
+
+    .modal-header {
+        padding-bottom: 5px;
+    }
+
+    .modal-footer {
+            padding: 0;
+        }
+
+    .modal-footer .btn-group button {
+        height:40px;
+        border-top-left-radius : 0;
+        border-top-right-radius : 0;
+        border: none;
+        border-right: 1px solid #ddd;
+    }
+
+    .modal-footer .btn-group:last-child > button {
+        border-right: 0;
+    }
+    .center {
+      text-align: center;
+     }
+    </style>
+</head>
+<body>
+  <div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<a href="{% url 'my_page:my_menu' %}"><button type="button" class="close" data-dismiss="modal" >
+				<span aria-hidden="true">×</span><span class="sr-only">Close</span></button></a>
+			<h3 class="modal-title center" id="lineModalLabel">承認確認画面</h3>
+		</div>
+		<div class="modal-body">
+
+            <!-- content goes here -->
+			<div class="text-center">
+
+
+                <h4>この仕事の承認をしてもよろしいですか？</h4><br>
+
+                <a href="{% url 'my_page:application_complete' %}"><input type="submit" name="botan" value="決定">
+                <a href="{% url 'my_page:my_menu' %}"><input type="submit" name="botan" value="キャンセル">
+　           </div></hr><br>
+
+		</div>
+		<div class="modal-footer">
+			<div class="btn-group btn-group-justified" role="group" aria-label="group button">
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Close</button>
+				</div>
+				<div class="btn-group btn-delete hidden" role="group">
+					<button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"  role="button">Delete</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+
+<!--
+　<div class="text-center">
+            <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+              <a href="http://bootnipets.com"><h6>プロフィール画像の編集</h6></a><br>
+
+            <input type="file" class="text-center center-block file-upload"><br>
+            <input type="submit" name="botan" value="保存">
+　</div></hr><br>-->
+</body>
+</html>

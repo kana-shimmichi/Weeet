@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% endblock %}
+{% block js %}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<h3>{{order.maker_decided.get_full_name}}様</h3>
+<h3>{{order.cost}}円</h3>
+<form action="{% url 'my_page:pay_credit' order.id %}" method="post">
+{% csrf_token %}
+    <input type="hidden" value={{order.buyer.email}} name="email">
+    <input type="hidden" name="cost" value="{{order.cost}}">
+<script class="payjp-button" src="https://checkout.pay.jp/" data-key="pk_test_5b55ae95b353f4a356659456"></script>
+</form>
+
+{% endblock %}
+
+
+
