@@ -1,10 +1,21 @@
 from django.db import models
+
+# メールを送る
 from django.core.mail import send_mail
+
+# ユーザーのフォームモデル
 from django.contrib.auth.models import PermissionsMixin, UserManager
+
+# ユーザのクラスモデルの継承
 from django.contrib.auth.base_user import AbstractBaseUser
+
+# 文字列を多言語化
 from django.utils.translation import ugettext_lazy as _
+
+# 時刻の表示・変換
 from django.utils import timezone
 
+######「Djangoでメールアドレスとパスワードでログインしてみる」より引用　https://qiita.com/cortyuming/items/2167a29a90c94bb4b1bb
 
 class CustomUserManager(UserManager):
     """ユーザーマネージャー"""
@@ -33,6 +44,7 @@ class CustomUserManager(UserManager):
             raise ValueError('Superuser must have is_superuser=True.')
         return self._create_user(email, password, **extra_fields)
 
+######　ここまで
 
 class UserRole(models.Model):
     name = models.CharField(max_length=10)
@@ -69,6 +81,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+
 
     class Meta:
         verbose_name = _('user')
