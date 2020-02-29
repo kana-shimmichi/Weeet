@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ff07fefa-b0f7-4175-90fd-c350cfa92e67" name="Default Changelist" comment="yasukochi_make">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weeet.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Weeet.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_page/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_page/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/register/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/coming_soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/coming_soon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$Weeet.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/email_change_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/email_change_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/email_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/email_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/email_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/email_change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/password_change.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/password_change.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/password_change_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/password_change_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/password_reset_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/user_create_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/user_create_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/user_create_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/user_create_done.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

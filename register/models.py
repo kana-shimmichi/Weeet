@@ -1,3 +1,5 @@
+
+# Djangoのモデルの呼び出し
 from django.db import models
 
 # メールを送る
@@ -14,8 +16,6 @@ from django.utils.translation import ugettext_lazy as _
 
 # 時刻の表示・変換
 from django.utils import timezone
-
-######「Djangoでメールアドレスとパスワードでログインしてみる」より引用　https://qiita.com/cortyuming/items/2167a29a90c94bb4b1bb
 
 class CustomUserManager(UserManager):
     """ユーザーマネージャー"""
