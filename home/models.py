@@ -80,12 +80,18 @@ class Order(models.Model):
         verbose_name_plural="オーダー"
 
     buyer = models.ForeignKey(User,on_delete=models.CASCADE,related_name="Buyer")
+
     title = models.CharField(max_length=20)
+
     body = models.TextField()
+
     order_type = models.ForeignKey(MstOrderType,on_delete=models.CASCADE)
 
     picture = models.ImageField(blank=True,null=True)
+
+
     order_finish_time = models.DateTimeField(blank=True,null=True)
+
     cost = models.IntegerField()
 
     status = models.ForeignKey(MstStatus,on_delete=models.CASCADE,null=True,blank=True)

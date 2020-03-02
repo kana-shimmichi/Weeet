@@ -61,6 +61,7 @@ class ContactForm(forms.ModelForm):
             'data-trigger':'manual',
         })
 
+
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order

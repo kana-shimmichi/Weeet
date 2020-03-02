@@ -153,13 +153,10 @@ def complete(request,order_id):
 
 
 def pay(request, order_id):
-
     order=Order.objects.get(id=order_id)
     if order.order_pay:
         return redirect('/my_menu')
-
     data={
-
         'order':order
     }
     return render(request,'my_page/pay.html',data)
@@ -174,7 +171,7 @@ def pay_credit(request,order_id):
             "currency": "jpy",
             "card": request.POST["payjp-token"]  # カードのトークン
         }
-        requests.post(request_url, params, auth=('sk_test_549d4368a701a3676967a6c5', ""))
+        requests.post(request_url, params, auth=('sk_test_b8ed4e1dfbe222ae1b8b8828', ""))
         order=Order.objects.get(id=order_id)
         status=MstStatusModel.objects.get(id=3)
         order.status=status
