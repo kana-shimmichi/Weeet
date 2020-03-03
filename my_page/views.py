@@ -113,15 +113,12 @@ def message(request,customer_id):
                 body=request.POST["body"],
                 file=request.FILES,
             )
-
-
     talk_lists = {}
     user = User.objects.get(id=customer_id)
     if request.user.user_role.id==1:
         messages=OrderMessage.objects.filter(maker=request.user,buyer=user).order_by('updated_at')
         message_profile=BuyerProfile.objects.get(user=user)
         msgs = OrderMessage.objects.filter(maker=request.user).order_by('-updated_at')
-
         for message in msgs:
             profile=BuyerProfile.objects.get(user=message.buyer)
             talk_lists[message.buyer]=[profile,message.updated_at]
@@ -132,13 +129,10 @@ def message(request,customer_id):
         for message in msgs:
             profile = MakerProfile.objects.get(user=message.maker)
             talk_lists[message.maker]=[profile,message.updated_at]
-
     data={
         "messages":messages,
         "talk_lists":talk_lists,
         'message_profile':message_profile,
-
-
     }
     return render(request,'my_page/message.html',data)
 

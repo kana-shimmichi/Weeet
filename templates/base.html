@@ -166,8 +166,10 @@
 
         .img {
             background-image: url(/media/img/top.png);
-            width: 100%;
-            height: 580px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width:100%;
+            height:550px;
         }
         .img-rounded{
             border-radius: 20px;
@@ -239,8 +241,8 @@
 				<div class="col-xs-12 col-sm-4 col-md-3">
 					<h5>メニュー</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>会員登録</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>ログイン</a></li>
+						<li><a href="/user_create/"><i class="fa fa-angle-double-right"></i>会員登録</a></li>
+						<li><a href="/login"><i class="fa fa-angle-double-right"></i>ログイン</a></li>
 						<li><a href="{% url 'home:research_result' %}"><i class="fa fa-angle-double-right"></i>仕事を探す</a></li>
 						<li><a href="{% url 'home:order_job' %}"><i class="fa fa-angle-double-right"></i>仕事の依頼</a></li>
                         <!--<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>会員登録</a></li>
