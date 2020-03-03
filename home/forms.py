@@ -88,3 +88,12 @@ class OrderForm(forms.ModelForm):
             'class':'form-control',
         })
 
+
+
+class SearchForm(forms.Form):
+
+    title = forms.CharField(
+        initial='',
+        label='タイトル',
+        required = False, # 必須ではない
+    )

@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.views import generic
 
 
-from .forms import UserForm,MakerProfileForm,BuyerProfileForm,ContactForm,OrderForm
+from .forms import UserForm,MakerProfileForm,BuyerProfileForm,ContactForm,OrderForm,SearchForm
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -12,6 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import MakerProfile,Like,BuyerProfile,Contact,Order,MstStatus,Like
 from .models import Order as OrderModel
 from register.models import UserRole
+from django.db.models import Q
 
 import datetime
 
@@ -63,9 +64,55 @@ class ResearchResult(generic.ListView):
     model = Order
     template_name = "home/research_result.html"
     paginate_by = 10
+
+    def post(self, request, *args, **kwargs):
+        form_value = [
+            self.request.POST.get('title', None),
+        ]
+        request.session['form_value'] = form_value
+        # 検索時にページネーションに関連したエラーを防ぐ
+        self.request.GET = self.request.GET.copy()
+        self.request.GET.clear()
+        return self.get(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        title = ''
+        if 'form_value' in self.request.session:
+            form_value = self.request.session['form_value']
+            title = form_value[0]
+        default_data = {'title': title,  # タイトル
+                        }
+        test_form = SearchForm(initial=default_data)  # 検索フォーム
+        context['test_form'] = test_form
+        return context
+
     def get_queryset(self):
-        status=MstStatus.objects.get(id=1)
-        return Order.objects.filter(status=status)
+        # sessionに値がある場合、その値でクエリ発行する。
+        if 'form_value' in self.request.session:
+            form_value = self.request.session['form_value']
+            title = form_value[0]
+            # 検索条件
+            condition_title = Q()
+            print(title)
+            if len(title) != 0 and title[0]:
+                condition_title = Q(title__icontains=title)
+
+            status = MstStatus.objects.get(id=1)
+            return Order.objects.select_related().filter(condition_title,status=status)
+        else:
+            status = MstStatus.objects.get(id=1)
+            return Order.objects.filter(status=status)
+
+
+
+
+
+
+
+
+
+
 
 
 def order_detail(request,order_id):
