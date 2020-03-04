@@ -10,22 +10,30 @@ import datetime
 import requests
 
 #マイページトップ
+# ログインした人だけ見れるよ。
+
 @login_required
+
 def menu(request):
     if request.user.user_role is None:
         return redirect("/role_choice")
+
     elif request.user.user_role.id==1:
         profile = MakerProfile.objects.get(user=request.user)
+
         my_orders = Order.objects.filter(
             Q(maker_decided=request.user),
             Q(status=MstStatusModel.objects.get(id=2))|
             Q(status=MstStatusModel.objects.get(id=3)))
+
         my_fin_orders=Order.objects.filter(
             Q(maker_decided=request.user),
             Q(status=MstStatusModel.objects.get(id=6))|
             Q(status=MstStatusModel.objects.get(id=4))|
             Q(status=MstStatusModel.objects.get(id=5)))
+
         likes = Like.objects.filter(user=request.user, like_order__status__id=1)
+
         data={
             'likes':likes,
             'profile':profile,
@@ -38,9 +46,11 @@ def menu(request):
 
     else:
         profile = BuyerProfile.objects.get(user=request.user)
+
         my_orders = Order.objects.filter(
             Q(buyer=request.user),
             Q(status=MstStatusModel.objects.get(id=1)))
+
         my_decided_orders = Order.objects.filter(
             Q(buyer=request.user),
             Q(status=MstStatusModel.objects.get(id=2))|

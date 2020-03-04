@@ -1,0 +1,164 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<head>
+  <title>マイメニュー</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+      .center {
+      text-align: center;
+      }
+  </style>
+</head>
+
+
+<hr>
+<div class="container bootstrap snippet">
+    <div class="row">
+  		<div class="col-sm-10"><h1>User name</h1></div>
+    </div>
+
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+
+          <div class="text-center">
+            <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+              <a href="{% url 'my_page:profile' %}"><h6>プロフィール画像の編集</h6></a><br>
+
+          </div></hr><br>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading center">ユーザ情報</div>
+            <div class="panel-body center"><a href="{% url 'my_page:register_info' %}">ユーザ情報の登録・変更</a></div>
+            <div class="panel-body center"><a href="{% url 'my_page:orderer_info' %}">発注者情報の登録・変更</a></div>
+            <div class="panel-body center"><a href="{% url 'my_page:contractor_info' %}">受注者情報の登録・変更</a></div>
+          </div>
+          <!--
+          <ul class="list-group">
+            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
+          </ul>-->
+
+          <div class="panel panel-default">
+            <div class="panel-heading center">チャット機能</div>
+            <div class="panel-body center"><a href="{% url 'my_page:message' %}">ダイレクトメッセージ</a></div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading center">仕事管理</div>
+            <div class="panel-body center"><a href="{% url 'home:order_job' %}">仕事の依頼</a></div>
+            <div class="panel-body center"><a href="{% url 'home:research_form' %}">仕事を探す</a></div>
+            <div class="panel-body center"><a href="{% url 'home:research_result' %}">検索結果</a></div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading center">臨時メニュー</div>
+            <div class="panel-body center"><a href="{% url 'my_page:favorite_list' %}">お気に入り</a></div>
+            <div class="panel-body center"><a href="{% url 'my_page:request_job' %}">依頼履歴</a></div>
+            <div class="panel-body center"><a href="{% url 'my_page:consent_list' %}">承諾依頼</a></div>
+            <div class="panel-body center"><a href="{% url 'my_page:trade_list' %}">取引一覧</a></div>
+            <div class="panel-body center"><a href="{% url 'my_page:complate' %}">完了・キャンセル</a></div>
+          </div>
+
+        </div><!--/col-3-->
+
+
+    	<div class="col-sm-9">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">お気に入り</a></li>
+                <li><a data-toggle="tab" href="#messages">お仕事依頼一覧</a></li>
+                <li><a data-toggle="tab" href="#settings">承諾依頼一覧</a></li>
+                <li><a data-toggle="tab" href="#settings">取引一覧</a></li>
+                <li><a data-toggle="tab" href="#settings">完了・キャンセル一覧</a></li>
+              </ul>
+
+
+            <div class="tab-content">
+                 <div class="tab-pane active" id="home">
+                     <hr>
+                  <form class="form" action="##" method="post" id="registrationForm">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-11 ">
+                                  <div class="panel-body">
+                                    <table class="table table-hover table-bordered table-list">
+                                      <thead>
+                                        <tr>
+                                            <th class="center active">依頼日</th>
+                                            <th class="center active">タイトル</th>
+                                            <th class="center active">詳細</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                              <tr>
+                                                <td class="col-md-2 center">2020/xx/xx</td>
+                                                <td class="col-md-4 center">「Web作成依頼」</td>
+                                                <td class="col-md-2 center">
+                                                  <a class="btn btn-default center">メッセージ</a>
+                                                  <a class="btn btn-warning center">申し込み</em></a>
+                                                </td>
+                                              </tr>
+                                      </tbody>
+
+                                      <tbody>
+                                              <tr>
+                                                <td class="col-md-2 center">2020/xx/xx</td>
+                                                <td class="col-md-4 center">「Web作成依頼」</td>
+                                                <td class="col-md-2 center">
+                                                  <a class="btn btn-default center">メッセージ</a>
+                                                  <a class="btn btn-warning center">申し込み</em></a>
+                                                </td>
+                                              </tr>
+                                      </tbody>
+                                    </table>
+
+                                  </div>
+
+                            </div>
+                        </div></div>
+              	  </form>
+                 </div><!--/tab-pane-->
+
+                 <div class="tab-pane" id="messages">
+                     <hr>
+                      <form class="form" action="##" method="post" id="registrationForm">
+
+                        <div class="container">
+                        <div class="row">
+
+                        </div></div></div>
+                      </form>
+                 </div><!--/tab-pane-->
+
+                 <div class="tab-pane" id="settings">
+                      <hr>
+                      <form class="form" action="##" method="post" id="registrationForm">
+
+                      </form>
+                 </div><!--/tab-pane-->
+
+          　</div><!--/tab-content-->
+        </div><!--/col-9-->
+    </div><!--/row-->
+
+
+
+
+

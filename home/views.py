@@ -65,6 +65,7 @@ class ResearchResult(generic.ListView):
     template_name = "home/research_result.html"
     paginate_by = 10
 
+    #検索する文字の情報を受け取っている。
     def post(self, request, *args, **kwargs):
         form_value = [
             self.request.POST.get('title', None),
@@ -75,6 +76,7 @@ class ResearchResult(generic.ListView):
         self.request.GET.clear()
         return self.get(request, *args, **kwargs)
 
+    # formの{{}}を表示させるためのデータを作成する。
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         title = ''
@@ -87,6 +89,7 @@ class ResearchResult(generic.ListView):
         context['test_form'] = test_form
         return context
 
+    # データの抽出・制限。
     def get_queryset(self):
         # sessionに値がある場合、その値でクエリ発行する。
         if 'form_value' in self.request.session:
