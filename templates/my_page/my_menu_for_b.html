@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+{% endblock %}
+{% block js %}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+
+<head>
+  <title>マイメニュー</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <style type="text/css">
+      .center {
+      text-align: center;
+      }
+  </style>
+</head>
+
+
+<hr>
+<div class="container bootstrap snippet">
+    <div class="row">
+  		<div class="col-sm-10"><h1>{{user.get_full_name}}</h1></div>
+    </div>
+
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+
+          <div class="text-center">
+              {% if profile.picture %}
+            <img src="{{profile.picture.url}}" class="avatar img-circle img-thumbnail" alt="Image">
+              {% else %}
+              <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="Image">
+
+              {% endif %}
+
+              <a href="{% url 'my_page:profile' %}"><h6>プロフィール画像の編集</h6></a><br>
+
+          </div></hr><br>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading center">ユーザ情報</div>
+              {% if user.user_role.id == 1 %}
+            <div class="panel-body center"><a href="{% url 'my_page:contractor_info' %}">登録情報変更</a></div>
+              {% else %}
+            <div class="panel-body center"><a href="{% url 'my_page:orderer_info' %}">登録情報変更</a></div>
+              {% endif %}
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading center">仕事管理</div>
+              {% if user.user_role.id == 1 %}
+              <div class="panel-body center"><a href="{% url 'home:research_result' %}">仕事を探す</a></div>
+              {% else %}
+            <div class="panel-body center"><a href="{% url 'home:order_job' %}">仕事の依頼</a></div>
+              {% endif %}
+
+          </div>
+        </div><!--/col-3-->
+
+    </div><!--/row-->
+
+{% endblock %}
+
+
+
