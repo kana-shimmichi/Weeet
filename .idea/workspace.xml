@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ff07fefa-b0f7-4175-90fd-c350cfa92e67" name="Default Changelist" comment="yasukochi_make">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weeet.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_page/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_page/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/Top.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/Top.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/menu/profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/menu/profile_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/menu/role_choice.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/menu/role_choice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/order_job.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/order_job.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/my_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page/my_menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register/user_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/user_create.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
