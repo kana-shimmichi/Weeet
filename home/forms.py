@@ -16,15 +16,15 @@ class MakerProfileForm(forms.ModelForm):
 
     class Meta:
         model = MakerProfile
-        fields = ('picture', 'lang','cost','skill')
+        fields = ('picture',)
 
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['lang'].widget = forms.CheckboxSelectMultiple()
-        self.fields['lang'].queryset = MstLang.objects
-        self.fields['skill'].widget = forms.CheckboxSelectMultiple()
-        self.fields['skill'].queryset = MstSkill.objects
+#
+#    def __init__(self, *args, **kwargs):
+#        super().__init__(*args, **kwargs)
+#        self.fields['lang'].widget = forms.CheckboxSelectMultiple()
+#        self.fields['lang'].queryset = MstLang.objects
+#        self.fields['skill'].widget = forms.CheckboxSelectMultiple()
+#        self.fields['skill'].queryset = MstSkill.objects
 
 
 
