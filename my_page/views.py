@@ -13,7 +13,6 @@ import requests
 # ログインした人だけ見れるよ。
 
 @login_required
-
 def menu(request):
     if request.user.user_role is None:
         return redirect("/role_choice")

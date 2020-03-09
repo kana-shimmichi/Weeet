@@ -128,7 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 AUTH_USER_MODEL = 'register.User'
@@ -138,3 +138,9 @@ LOGIN_URL = 'register:login'
 
 LOGIN_REDIRECT_URL='/my_menu/'
 LOGOUT_REDIRECT_URL='/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'weeet.system@gmail.com'
+EMAIL_HOST_PASSWORD = 'weeetpass'
+EMAIL_USE_TLS = True

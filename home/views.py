@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.views import generic
 
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import UserForm,MakerProfileForm,BuyerProfileForm,ContactForm,OrderForm,SearchForm
 
 from django.contrib.auth.decorators import login_required
@@ -60,7 +60,7 @@ class Order_Job(generic.CreateView):
         return redirect('/')
 
 
-class ResearchResult(generic.ListView):
+class ResearchResult(generic.ListView,LoginRequiredMixin):
     model = Order
     template_name = "home/research_result.html"
     paginate_by = 10
