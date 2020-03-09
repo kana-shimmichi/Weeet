@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.views import generic
 
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -101,10 +101,10 @@ class ResearchResult(generic.ListView,LoginRequiredMixin):
             if len(title) != 0 and title[0]:
                 condition_title = Q(title__icontains=title)
 
-            status = MstStatus.objects.get(id=1)
+            status = get_object_or_404(MstStatus,id=1)
             return Order.objects.select_related().filter(condition_title,status=status)
         else:
-            status = MstStatus.objects.get(id=1)
+            status = get_object_or_404(MstStatus, id=1)
             return Order.objects.filter(status=status)
 
 
