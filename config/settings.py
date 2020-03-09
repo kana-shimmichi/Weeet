@@ -25,7 +25,7 @@ SECRET_KEY = 'vga^b=!ka*#v=1o9!k6r!mv8i03_+@inq*_0dp4m2&=%l8kt0d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
