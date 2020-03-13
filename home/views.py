@@ -119,7 +119,11 @@ class ResearchResult(generic.ListView,LoginRequiredMixin):
 
 
 def order_detail(request,order_id):
-    return render(request,'home/order_detail.html')
+    order=OrderModel.objects.get(id=order_id)
+    data={
+        "order":order,
+    }
+    return render(request,'home/order_detail.html',data)
 
 def like(request,order_id):
 

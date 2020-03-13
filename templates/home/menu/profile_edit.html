@@ -9,6 +9,7 @@
 
 
 {% block content %}
+{{user_role.id}}
 <form action="/add_profile/"method="POST" enctype="multipart/form-data" >
   {% csrf_token %}
   <div class="modal-dialog">
