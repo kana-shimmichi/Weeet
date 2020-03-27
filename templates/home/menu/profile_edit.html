@@ -7,13 +7,40 @@
 <script src="{% static 'home/js/menu.js' %}"></script>
 {% endblock %}
 
-{% block content %}
 
+{% block content %}
+{{user_role.id}}
 <form action="/add_profile/"method="POST" enctype="multipart/form-data" >
   {% csrf_token %}
-{{ user_forms.as_p }}
-{{ profile_forms.as_p }}
-  <button class="promo-section-cta button primary" type="submit">保存</button>
-</form>
+  <div class="modal-dialog">
+          <div class="modal-content">
+              <form class="">
 
+                <div class="modal-header">
+                    <div class="center col-12"><br>
+                      <h3 id="myModalLabel" >プロフィールの登録</h3>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <div><br>
+                       {{ user_forms.as_p }}
+                        {{ profile_forms.as_p }}
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="container-fluid">
+                      <div class="row">
+                              <div class="center col-12">
+                                <button class="promo-section-cta button primary" type="submit">保存</button>
+                  　          </div>
+                      </div>
+                    </div>
+                </div>
+
+             </form>
+          </div>
+        </div><br><br>
+  </form>
 {% endblock %}

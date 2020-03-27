@@ -1,73 +1,127 @@
 {% extends "base.html" %}
-{% load static %}
-{% block css %}
-
-<link rel="stylesheet" href="{% static 'home/css/about.css' %}">
-{% endblock %}
-{% block js %}
-
-{% endblock %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>よくある質問</title>
+    <!-- CSS START -->
+     <style type="text/css">
+      .center {
+      text-align: center;
+      }
+      .question {
+      color:#FF9B00;
+      }
+      .answer {
+      color:#3676E0;
+      }
+     </style>
+    <!-- CSS END -->
+</head>
 
 {% block content %}
+<body>
 
-
-    <!-- 診断ステップ -->
-    <div class="product-filters">
-     <h1 class="product-filters-header hide-for-small-only">よくある質問</h1>
-     <ul class="vertical menu hide-for-small-only" data-accordion-menu>
-        <li class="product-filters-tab">
-          <div class="polls">
-
-            <h5 class="polls-question">
-              <span class="polls-question-label">Q:</span>
-              サイトの利用は無料ですか?
-            </h5>
-            <h5 class="polls-question">
-              <span class="polls-question-label">A:</span>
-              登録から発注・受注まで無料でご利用いただけます。
-            </h5>
-
-            <h5 class="polls-question">
-              <span class="polls-question-label">Q:</span>
-              仕事依頼をしたの返事が来ません。
-            </h5>
-            <h5 class="polls-question">
-              <span class="polls-question-label">A:</span>
-              ログインをして、マイメニューのメッセージから仕事依頼をした方に連絡を取って見てください。
-            </h5>
-
-            <h5 class="polls-question">
-              <span class="polls-question-label">Q:</span>
-              仕事依頼の際の契約金額の決め方について
-            </h5>
-            <h5 class="polls-question">
-              <span class="polls-question-label">A:</span>
-              仕事依頼内容をご確認いただいた上で、 受注者・発注者の双方の希望に沿った金額を考慮して下さい。<br>
-              金額に関する交渉等はマイメニューのお気に入りからメッセージを送付してお話し合い下さい。
-            </h5>
-
-            <h5 class="polls-question">
-              <span class="polls-question-label">Q:</span>
-              仕事は途中で辞退できますか?
-            </h5>
-            <h5 class="polls-question">
-              <span class="polls-question-label">A:</span>
-              双方の話し合いで同意が取れましたらマイメニューの取引一覧から対象の案件の欄にある「辞退」ボタンより可能です。
-            </h5>
-
-            <h5 class="polls-question">
-              <span class="polls-question-label">Q:</span>
-              その他、分からないことがあります。
-            </h5>
-            <h5 class="polls-question">
-              <span class="polls-question-label">A:</span>
-              その他質問したいことがある場合は「お問い合わせ」から内容及びファイルなどを記入・添付のほど送信して下さい。<br>
-              通常、一週間以内に運営より記入していただいたメールアドレスに回答をさせていただきます。
-            </h5>
-
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="center"><h2 id="myModalLabel">　　　　よくある質問</h2></div>
           </div>
-       </li>
-    </ul>
-  </div>
+          <div class="modal-body">
+              <div class="form-group"><label></label>
+                <h5 class="">
+                <span class="question">Q:</span>
+                サイトの利用は無料ですか?
+                </h5>
+
+                <h6 class="">
+                <span class="answer">A:</span>
+                 登録から発注・受注まで無料でご利用いただけます。
+                </h6>
+              </div><br>
+
+              <div class="form-group"><label></label>
+                <h5 class="">
+                <span class="question">Q:</span>
+                仕事依頼をしたのに返事が来ません。
+                </h5>
+
+                <h6 class="">
+                <span class="answer">A:</span>
+                 ログインをして、マイメニューのメッセージから仕事依頼をし
+                 <br>　 た方に連絡を取ってみてください。
+                </h6>
+              </div><br>
+
+
+              <div class="form-group"><label></label>
+                <h5 class="">
+                <span class="question">Q:</span>
+                仕事依頼の際の契約金額の決め方について
+                </h5>
+
+                <h6 class="">
+                <span class="answer">A:</span>
+                仕事依頼内容をご確認いただいた上で、 受注者・発注者の双
+                <br>　 方の希望に沿った金額を考慮して下さい。
+                <br>　 金額に関する交渉等はマイメニューのお気に入りからメッセー
+                <br>　 ジを送付してお話し合い下さい。
+                </h6>
+              </div><br>
+
+              <div class="form-group"><label></label>
+                <h5 class="">
+                <span class="question">Q:</span>
+                仕事は途中で辞退できますか?
+                </h5>
+
+                <h6 class="">
+                <span class="answer">A:</span>
+                 双方の話し合いで同意が取れましたらマイメニューの取引一覧
+                 <br>　 から対象の案件の欄にある「キャンセル」ボタンより辞退が
+                 <br>　 可能です。
+                </h6>
+              </div><br>
+
+              <div class="form-group"><label></label>
+                <h5 class="">
+                <span class="question">Q:</span>
+                その他、分からないことがあります。
+                </h5>
+
+                <h6 class="">
+                <span class="answer">A:</span>
+                 その他質問したいことがある場合は「お問い合わせ」から内
+                 <br>　 容及びファイルなどを記入・添付のほど送信して下さい。
+                 <br>　 通常、一週間以内に運営より記入していただいたメールアド
+                 <br>　 レスに回答をさせていただきます。
+                </h6>
+              </div><br>
+
+             <div class="modal-footer">
+              <div class="container-fluid">
+              <div class="row">
+                  <div class="center col-4"></div>
+                <div class="center col-3">
+                 <a href="{% url 'home:top' %}">
+                     <button input="submit" class="btn btn-warning">　 戻る 　</button></a>
+                </div>
+            　  </div>
+              </div>
+             </div>
+
+             </div>
+        </div>
+      </div>
+    </div><br><br>
+
+
+
+</body>
+</html>
 {% endblock %}
 

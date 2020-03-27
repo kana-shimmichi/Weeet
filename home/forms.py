@@ -16,8 +16,7 @@ class MakerProfileForm(forms.ModelForm):
 
     class Meta:
         model = MakerProfile
-        fields = ('picture', 'lang','cost','skill')
-
+        fields = ('picture','lang','cost','skill')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -88,3 +87,12 @@ class OrderForm(forms.ModelForm):
             'class':'form-control',
         })
 
+
+
+class SearchForm(forms.Form):
+
+    title = forms.CharField(
+        initial='',
+        label='タイトル',
+        required = False, # 必須ではない
+    )

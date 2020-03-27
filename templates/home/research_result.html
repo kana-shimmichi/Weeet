@@ -23,9 +23,17 @@
                         </div>
                         <div class="collapse navbar-collapse" id="">
                             <div class="navbar-form navbar-left">
+<<<<<<< HEAD
                                 <form method="GET">
                                 <input type="text" class="form-control" />
                                 <button class="btn btn-default">検索</button>
+=======
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <input type="text"  name="title" class="form-control" />
+                                    <button type="submit" class="btn btn-default">検索</button>
+                                </form>
+>>>>>>> 6d358f5325bb651877ff4f8d5a243f130b503e53
                             </div>
                         </div>
 

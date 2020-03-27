@@ -1,20 +1,81 @@
 {% extends "base.html" %}
+
+
+<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ</title>
+    <!-- CSS START -->
+     <style type="text/css">
+      .center {
+      text-align: center;
+      }
+     </style>
+    <!-- CSS END -->
+</head>
 {% block content %}
 
+<body>
 
-    <form class="log-in-form" action="{% url 'register:login' %}" method="POST">
-        <h4 class="text-center">ログイン画面</h4>
-        <label>メールアドレス
-            {{ form.non_field_errors }}
-                {% for field in form %}
-                    {{ field }}
-                    {{ field.errors }}
-            <hr>
-                {% endfor %}
-                <button type="submit" class="button expanded" >ログイン</button>
-                <input type="hidden" name="next" value="{{ next }}" />
-                {% csrf_token %}
-            <a href="{% url 'register:password_reset' %}" class="btn btn-success btn-lg btn-block" >パスワードを忘れた方</a>
-    </form>
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="log-in-form" action="{% url 'register:login' %}" method="POST">
+
+              <div class="modal-header">
+                <form method="POST" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="center col-12"><br>
+                    <h3 id="myModalLabel" >ログイン画面　</h3>
+                  </div>
+              </div>
+
+
+              <div class="modal-body col-12">
+                  <div>
+                     {{ form.non_field_errors }}
+                    {% for field in form %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+                        {{ field }}
+                        {{ field.errors }}
+                    </div>
+                    {% endfor %}
+                    {% csrf_token %}
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+              <div class="container-fluid">
+                <div class="row">
+
+                        <div class="center col-4">
+            　          </div>
+                        <div class="center col-3">
+                             {% csrf_token %}
+                            <button type="submit" class="button expanded" >ログイン</button>
+                            <input type="hidden" name="next" value="{{ next }}" />
+            　          </div>
+                </div>
+                <div class="row">
+                        <div class="center ">
+            　          </div>
+                        <div class="center col-12">
+                            <a href="{% url 'register:password_reset' %}" class="btn btn-success btn-lg btn-block" >パスワードを忘れた方</a>
+                        </div>
+                </div>
+              </div>
+              </div>
+           </form>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div><br><br>
+</body>
+</html>
 
 {% endblock %}

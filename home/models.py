@@ -117,11 +117,14 @@ class Order(models.Model):
 class OrderMessage(models.Model):
     class Meta:
         verbose_name_plural="オーダーメッセージ"
+
     buyer = models.ForeignKey(User,on_delete=models.CASCADE,related_name="MessageBuyer")
     maker = models.ForeignKey(User, on_delete=models.CASCADE, related_name="MessageMaker")
     talker = models.ForeignKey(User,on_delete=models.CASCADE,related_name="Talker")
     body= models.TextField()
     file = models.FileField(blank=True)
+
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

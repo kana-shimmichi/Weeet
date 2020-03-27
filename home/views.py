@@ -1,8 +1,8 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.views import generic
 
-
-from .forms import UserForm,MakerProfileForm,BuyerProfileForm,ContactForm,OrderForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import UserForm,MakerProfileForm,BuyerProfileForm,ContactForm,OrderForm,SearchForm
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -12,6 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import MakerProfile,Like,BuyerProfile,Contact,Order,MstStatus,Like
 from .models import Order as OrderModel
 from register.models import UserRole
+from django.db.models import Q
 
 import datetime
 
@@ -59,17 +60,70 @@ class Order_Job(generic.CreateView):
         return redirect('/')
 
 
-class ResearchResult(generic.ListView):
+class ResearchResult(generic.ListView,LoginRequiredMixin):
     model = Order
     template_name = "home/research_result.html"
     paginate_by = 10
+
+    #検索する文字の情報を受け取っている。
+    def post(self, request, *args, **kwargs):
+        form_value = [
+            self.request.POST.get('title', None),
+        ]
+        request.session['form_value'] = form_value
+        # 検索時にページネーションに関連したエラーを防ぐ
+        self.request.GET = self.request.GET.copy()
+        self.request.GET.clear()
+        return self.get(request, *args, **kwargs)
+
+    # formの{{}}を表示させるためのデータを作成する。
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        title = ''
+        if 'form_value' in self.request.session:
+            form_value = self.request.session['form_value']
+            title = form_value[0]
+        default_data = {'title': title,  # タイトル
+                        }
+        test_form = SearchForm(initial=default_data)  # 検索フォーム
+        context['test_form'] = test_form
+        return context
+
+    # データの抽出・制限。
     def get_queryset(self):
-        status=MstStatus.objects.get(id=1)
-        return Order.objects.filter(status=status)
+        # sessionに値がある場合、その値でクエリ発行する。
+        if 'form_value' in self.request.session:
+            form_value = self.request.session['form_value']
+            title = form_value[0]
+            # 検索条件
+            condition_title = Q()
+            print(title)
+            if len(title) != 0 and title[0]:
+                condition_title = Q(title__icontains=title)
+
+            status = get_object_or_404(MstStatus,id=1)
+            return Order.objects.select_related().filter(condition_title,status=status)
+        else:
+            status = get_object_or_404(MstStatus, id=1)
+            return Order.objects.filter(status=status)
+
+
+
+
+
+
+
+
+
+
 
 
 def order_detail(request,order_id):
-    return render(request,'home/order_detail.html')
+    order=OrderModel.objects.get(id=order_id)
+    data={
+        "order":order,
+    }
+    return render(request,'home/order_detail.html',data)
 
 def like(request,order_id):
 

@@ -1,8 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
-<p>
-    本登録が完了しました。<br>
-    登録されたメールアドレスとパスワードでログインしてください。<br>
-    <a class="btn btn-primary btn-lg" href="{% url 'register:login' %}">ログイン</a>
-</p>
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="">
+
+              <div class="modal-header">
+                  <div class="center col-12"><br>
+                    <h3 id="myModalLabel" >確認　</h3>
+                  </div>
+              </div>
+
+              <div class="modal-body">
+                  <div><br>
+                      <p>
+                        本登録が完了しました。<br><br>
+                        登録されたメールアドレスとパスワードでログインしてください。<br>
+
+                      </p>
+                  </div>
+              </div>
+
+              <div class="modal-footer">
+                  <div class="container-fluid">
+                    <div class="row">
+                            <div class="center col-12">
+                                <a class="btn btn-primary btn-lg" href="{% url 'register:login' %}">ログイン</a>
+                　          </div>
+                    </div>
+                  </div>
+              </div>
+
+           </form>
+        </div>
+      </div><br><br>
 {% endblock %}
