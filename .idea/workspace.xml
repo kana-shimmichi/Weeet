@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff07fefa-b0f7-4175-90fd-c350cfa92e67" name="Default Changelist" comment="yasukochi_make">
-      <change beforePath="$PROJECT_DIR$/templates/HTML・CSS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/order/makers_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/order/makers_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/order/order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/order/orders_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/research_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/research_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/research_result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/consent_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/contractor_info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/application.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/application_complate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/approval.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/approval_complate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/cancel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/cancel_complate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/change.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/change_complate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/complate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/complate_ untreated.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/complate_complate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/complate_finish.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/payment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/payment_ untreated.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/payment_complate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/table/button/payment_finish.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register/password_reset_form.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,60 +16,74 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/order_job.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="49" column="18" selection-end-line="71" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/question.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-363" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/menu/profile_edit.html">
+        <entry file="file://$PROJECT_DIR$/templates/register/email_change_complete.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/menu/role_choice.html">
+        <entry file="file://$PROJECT_DIR$/templates/register/password_reset_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-285" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/order/orders_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/contact.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-122" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/home/research_result.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+            <state relative-caret-position="341">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home/diagnosis.html">
+        <entry file="file://$PROJECT_DIR$/templates/register/password_reset_confirm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57" />
+            <state relative-caret-position="442">
+              <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/register/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="80" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/register/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="150" column="27" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -107,6 +99,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/confirm/MQ/set-password/</find>
+      <find>PasswordResetConfirm.</find>
+      <find>DEBUG</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -114,11 +113,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/home/research_result.html" />
+        <option value="$PROJECT_DIR$/templates/register/password_reset_form.html" />
+        <option value="$PROJECT_DIR$/templates/register/password_reset_confirm.html" />
+        <option value="$PROJECT_DIR$/config/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="330" />
+    <option name="x" value="332" />
     <option name="y" value="23" />
     <option name="width" value="1244" />
     <option name="height" value="767" />
@@ -139,50 +141,12 @@
             <path>
               <item name="Weeet" type="b2602c69:ProjectViewProjectNode" />
               <item name="Weeet" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnotis" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Weeet" type="b2602c69:ProjectViewProjectNode" />
               <item name="Weeet" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnotis" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weeet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weeet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weeet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weeet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="diagnotis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weeet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weeet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weeet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weeet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weeet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weeet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="order" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weeet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weeet" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="my_page" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -216,18 +180,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585306743366</updated>
-      <workItem from="1585306747903" duration="550000" />
+      <workItem from="1585306747903" duration="886000" />
+      <workItem from="1585656008769" duration="465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1196000" />
+    <option name="totallyTimeSpent" value="1997000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="330" y="23" width="1244" height="767" extended-state="0" />
+    <frame x="332" y="23" width="1244" height="767" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20881863" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21214642" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -326,55 +291,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/my_page/complate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/menu/profile_edit.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/order/makers_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1179" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/order/makers_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1390" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/order/order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-803" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/order/orders_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/order/makers_edit.html" />
+    <entry file="file://$PROJECT_DIR$/templates/home/order/makers_list.html" />
+    <entry file="file://$PROJECT_DIR$/templates/home/order/order.html" />
+    <entry file="file://$PROJECT_DIR$/templates/home/order/orders_edit.html" />
     <entry file="file://$PROJECT_DIR$/templates/home/menu/role_choice.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-285" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/order/orders_list.html">
+    <entry file="file://$PROJECT_DIR$/templates/home/research_form.html" />
+    <entry file="file://$PROJECT_DIR$/templates/my_page/favorite_list.html" />
+    <entry file="file://$PROJECT_DIR$/templates/my_page/complate.html" />
+    <entry file="file://$PROJECT_DIR$/templates/my_page/trade_list.html" />
+    <entry file="file://$PROJECT_DIR$/templates/my_page/request_job.html" />
+    <entry file="file://$PROJECT_DIR$/templates/my_page/register_info.html" />
+    <entry file="file://$PROJECT_DIR$/templates/home/order_job.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123" />
+        <state relative-caret-position="735">
+          <caret line="49" column="18" selection-end-line="71" selection-end-column="14" />
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/question.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/order/orders_list.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/contact.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home/research_result.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122" />
+        <state relative-caret-position="360">
+          <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+        </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/my_page/message.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/diagnosis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home/instractions.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -382,27 +344,59 @@
     <entry file="file://$PROJECT_DIR$/templates/home/order_detail.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/order_job.html">
+    <entry file="file://$PROJECT_DIR$/templates/register/email_change_complete.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/register/password_reset_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="49" column="18" selection-end-line="71" selection-end-column="14" />
+        <state relative-caret-position="341">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/research_form.html">
+    <entry file="file://$PROJECT_DIR$/register/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-634" />
+        <state relative-caret-position="300">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/question.html">
+    <entry file="file://$PROJECT_DIR$/register/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-363" />
+        <state relative-caret-position="154">
+          <caret line="150" column="27" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home/research_result.html">
+    <entry file="file://$PROJECT_DIR$/templates/register/password_reset_confirm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+        <state relative-caret-position="442">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
         </state>
       </provider>
     </entry>
