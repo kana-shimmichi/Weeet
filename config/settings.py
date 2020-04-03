@@ -122,13 +122,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
 if DEBUG:
-    pass
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 else:
-    STATIC_URL = '/static/'
     STATIC_ROOT = '/var/www/mysite/static'
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT ='/var/www/mysite/media'
+    MEDIA_ROOT = '/var/www/mysite/media'
+
+
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
