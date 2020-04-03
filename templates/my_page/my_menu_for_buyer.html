@@ -22,7 +22,168 @@
       }
   </style>
 </head>
+        <style type="text/css">
 
+
+        /******************* content *****************/
+        body{
+              font-family: 'Nunito', sans-serif;
+            }
+            .jumbotron-odi-hero{
+            padding: 0rem 0rem;
+             position: relative;
+             max-width: 100%;
+
+            }
+            .jumbotron-odi-dark{
+             max-width: 100%;
+             padding: 0px;
+
+            }
+
+            .jumbotron-overlay {
+             height:100%;
+             padding: 100px 0;
+             color:#fff;
+
+            }
+            .jumbotron-padding{
+             padding-top: 6rem;
+
+            }
+
+            .btn-circle {
+               border-radius: 30px;
+            }
+
+            .latest-news {
+             border-bottom: .25rem solid transparent;
+             border-bottom-color: #007bff;
+            }
+
+            .how-section1{
+                margin-top:-20%;
+                padding: 13%;
+            }
+            .how-section1 h4{
+                color: #fffff;
+                font-weight: bold;
+                font-size: 30px;
+            }
+            .how-section1 .subheading{
+                color: #3931af;
+                font-size: 20px;
+            }
+            .how-section1 .row
+            {
+                margin-top: 20%;
+            }
+            .how-img
+            {
+                text-align: center;
+            }
+            .how-img img{
+                width: 100%;
+            }
+        /******************* content *****************/
+
+        /* Footer */
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        section {
+            padding: 60px 0;
+        }
+
+        section .section-title {
+            text-align: center;
+            color: #007b5e;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        #footer {
+            background: #6B6B75 !important;
+        }
+        #footer h5{
+            padding-left: 10px;
+            border-left: 3px solid #eeeeee;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            color:#ffffff;
+        }
+        #footer a {
+            color: #ffffff;
+            text-decoration: none !important;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+        }
+        #footer ul.social li{
+            padding: 3px 0;
+        }
+        #footer ul.social li a i {
+            margin-right: 5px;
+            font-size:25px;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        #footer ul.social li:hover a i {
+            font-size:30px;
+            margin-top:-10px;
+        }
+        #footer ul.social li a,
+        #footer ul.quick-links li a{
+            color:#ffffff;
+        }
+        #footer ul.social li a:hover{
+            color:#3b5998;
+        }
+        #footer ul.quick-links li{
+            padding: 3px 0;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        #footer ul.quick-links li:hover{
+            padding: 3px 0;
+            margin-left:5px;
+            font-weight:700;
+        }
+        #footer ul.quick-links li a i{
+            margin-right: 5px;
+        }
+        #footer ul.quick-links li:hover a i {
+            font-weight: 700;
+        }
+
+        @media (max-width:767px){
+            #footer h5 {
+            padding-left: 0;
+            border-left: transparent;
+            padding-bottom: 0px;
+            margin-bottom: 10px;
+        }
+        }
+        /* Footer */
+
+        .img {
+            background-image: url(/media/img/top.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width:100%;
+            height:550px;
+        }
+        .img-rounded{
+            border-radius: 20px;
+        }
+        .center {
+          text-align: center;
+        }
+        .section1{
+                color: #fffff;
+                font-weight: bold;
+                font-size: 50px;
+        }
+
+        </style>
 
 <hr>
 <div class="container bootstrap snippet">
@@ -204,7 +365,68 @@
           　</div><!--/tab-content-->
         </div><!--/col-9-->
     </div><!--/row-->
+	<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
 
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <a class="nav-link p-2 font-weight-bold text-white" href="{% url 'home:top' %}">
+                        <font color="#ffffff"><h1>Weeet</h1></font>
+				        <br>
+				        <br>
+                    </a>
+				</div>
+
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<h5>メニュー</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="/user_create/"><i class="fa fa-angle-double-right"></i>会員登録</a></li>
+						<li><a href="/login"><i class="fa fa-angle-double-right"></i>ログイン</a></li>
+						<li><a href="{% url 'home:research_result' %}"><i class="fa fa-angle-double-right"></i>仕事を探す</a></li>
+						<li><a href="{% url 'home:order_job' %}"><i class="fa fa-angle-double-right"></i>仕事の依頼</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-3">
+					<h5>サポート</h5>
+					<ul class="list-unstyled quick-links">
+                        <li><a href="{% url 'home:contact' %}"><i class="fa fa-angle-double-right"></i>お問合せ</a></li>
+						<li><a href="{% url 'home:question' %}"><i class="fa fa-angle-double-right"></i>よくある質問</a></li>
+                    </ul>
+				</div>
+
+
+			</div>
+
+            <!-- 3月実装予定
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="https://facebook.com/ViccoFamily" target="_blank"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/Vicco" target="_blank"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="https://instagram.com/Vicco" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.youtube.com/user/ViccoFamily" target="_blank"><i class="fa fa-youtube"></i></a></li>
+						<li class="list-inline-item"><a href="mailto:info@viccoshop.com.tr" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+			</div>-->
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+				    <br>
+                    <br>
+					<p class="h6">
+                        <font color="#ffffff">Copyright (c) 2020 Weeet　All Rights Reserved.</font>
+                    </p>
+				</div>
+            </div>
+
+		</div><font color="#000000">
+	</font></section><font color="#000000">
+<!-- ./Footer -->
+
+
+    </body>
+</html>
 
 
 

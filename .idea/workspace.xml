@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff07fefa-b0f7-4175-90fd-c350cfa92e67" name="Default Changelist" comment="yasukochi_make">
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html.backup" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html.backup" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,14 +48,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1178" />
+            <state relative-caret-position="447">
+              <caret line="185" column="16" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="24" selection-start-line="24" selection-end-line="185" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -71,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html.backup">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="327">
+              <caret line="224" column="14" lean-forward="true" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -91,18 +103,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="94">
               <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1995">
-              <caret line="150" column="27" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -131,6 +131,8 @@
         <option value="$PROJECT_DIR$/my_page/views.py" />
         <option value="$PROJECT_DIR$/config/urls.py" />
         <option value="$PROJECT_DIR$/config/settings.py" />
+        <option value="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html.backup" />
+        <option value="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html" />
       </list>
     </option>
   </component>
@@ -209,18 +211,18 @@
       <workItem from="1585306747903" duration="886000" />
       <workItem from="1585656008769" duration="1635000" />
       <workItem from="1585904285266" duration="305000" />
-      <workItem from="1585911865320" duration="980000" />
+      <workItem from="1585911865320" duration="1757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4452000" />
+    <option name="totallyTimeSpent" value="5229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="332" y="23" width="1244" height="767" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38602328" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38602328" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -234,7 +236,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32935917" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20296296" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.20296296" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32935917" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -412,18 +414,6 @@
     <entry file="file://$PROJECT_DIR$/templates/my_page/my_menu.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1178" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html.backup">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -457,6 +447,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="143" selection-start-line="143" selection-end-line="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html.backup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="224" column="14" lean-forward="true" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" selection-start-line="24" selection-end-line="185" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="185" column="16" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
         </state>
       </provider>
     </entry>
