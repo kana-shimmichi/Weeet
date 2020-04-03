@@ -42,7 +42,6 @@ def menu(request):
         }
         return render(request,'my_page/my_menu.html',data)
 
-
     else:
         profile = BuyerProfile.objects.get(user=request.user)
 
