@@ -130,14 +130,15 @@ MEDIA_URL = '/media/'
 if DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     STATIC_ROOT = '/var/www/mysite/static'
     MEDIA_ROOT = '/var/www/mysite/media'
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 AUTH_USER_MODEL = 'register.User'
