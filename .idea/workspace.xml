@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff07fefa-b0f7-4175-90fd-c350cfa92e67" name="Default Changelist" comment="yasukochi_make">
-      <change beforePath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html.backup" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_page/my_menu_for_buyer.html.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
